@@ -10,8 +10,14 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
+# Install Prisma globally
+RUN npm install -g prisma
+
 # Copy the rest of the application code
 COPY . .
+
+# Generate Prisma client
+RUN npx prisma generate
 
 # Expose the port that the Node.js server will run on
 EXPOSE 3000

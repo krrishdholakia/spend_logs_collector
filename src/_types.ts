@@ -1,3 +1,15 @@
+export type LiteLLM_IncrementSpend = {
+    key_transactions: Array<LiteLLM_IncrementObject>, // [{"key": spend},..]
+    user_transactions: Array<LiteLLM_IncrementObject>, 
+    team_transactions: Array<LiteLLM_IncrementObject>,
+    spend_logs_transactions: Array<LiteLLM_SpendLogs>
+}
+
+export type LiteLLM_IncrementObject = {
+    key: string,
+    spend: number
+}
+
 export type LiteLLM_SpendLogs = {
     request_id: string; // @id means it's a unique identifier
     call_type: string;
