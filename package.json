@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "dev": "tsx watch src/index.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.9.0",
+    "@prisma/client": "^5.11.0",
+    "hono": "^4.1.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "prisma": "^5.11.0",
+    "tsx": "^3.12.2"
+  }
+}
